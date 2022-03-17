@@ -1,12 +1,5 @@
-$primary-color: rgb(25, 65, 13);
-$secondary-color: rgb(187, 165, 40);
-$show-home-image: true;
-$home-image: url(../img/bitcoin2.jpg);
-$background-opacity: 0.9;
-
-@mixin easeOut {
-    transition: all 0.5s ease-out;
-}
+@import 'config';
+@import 'menu';
 
 @mixin background {
     @if $show-home-image {
@@ -58,6 +51,13 @@ h1, h2, h3 {
         padding: 0.2rem 1rem;
         background: rgba(lighten($primary-color, 2),0.5);
     }
+}
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+#youtubehomma {
+    
 }
 
 a {
