@@ -20,18 +20,75 @@
     .menu-btn.close .btn-line:nth-child(3) {
       transform: rotate(-45deg) translate(7px, -6px); }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 0.9;
+  visibility: hidden; }
+  .menu.show {
+    visibility: visible; }
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    width: 30%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    background: #1c1b15;
+    list-style: none;
+    transform: translate3d(100%, 0, 0);
+    transition: all 0.5s ease-out; }
+    .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+    .menu-nav .nav-item {
+      transform: translate3d(600px, 0, 0);
+      transition: all 0.5s ease-out; }
+      .menu-nav .nav-item.show {
+        transform: translate3d(0, 0, 0); }
+      .menu-nav .nav-item.current > a {
+        color: #3e81b5; }
+  .menu .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease-out; }
+    .menu .nav-link:hover {
+      color: #3e81b5; }
+
+.nav-item:nth-child(1) {
+  transition-delay: 0.1s; }
+
+.nav-item:nth-child(2) {
+  transition-delay: 0.2s; }
+
+.nav-item:nth-child(3) {
+  transition-delay: 0.3s; }
+
+.nav-item:nth-child(4) {
+  transition-delay: 0.4s; }
+
 * {
   box-sizing: border-box; }
 
 body {
-  background: #19410d;
+  background: #2a2920;
   color: #fff;
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
-    background: url(../img/bitcoin2.jpg);
+    background: url(../img/mentoring2.jpg);
     background-attachment: fixed;
     background-size: cover; }
   body:after {
@@ -42,7 +99,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: rgba(25, 65, 13, 0.9); }
+    background: rgba(42, 41, 32, 0.9); }
 
 h1, h2, h3 {
   margin: 0;
@@ -52,7 +109,7 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(28, 74, 15, 0.5); }
+    background: rgba(48, 47, 36, 0.5); }
 
 h3 {
   margin-top: 1rem;
@@ -68,19 +125,150 @@ header {
   width: 100%; }
 
 .text-secondary {
-  color: #bba528; }
+  color: #3e81b5; }
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
       padding: 0.4rem; }
       main .icons a:hover {
-        color: #bba528;
+        color: #3e81b5;
         transition: all 0.5s ease-out; }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas: 'bioimage bio bio' 'way1 way2 way3' 'way4 way5 way6';
+  grid-template-columns: repeat(3, 1fr); }
+
+.bio-image {
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 0%;
+  border: #3e81b5 3px solid; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem; }
+
+.way-1 {
+  grid-area: way1; }
+
+.way-2 {
+  grid-area: way2; }
+
+.way-3 {
+  grid-area: way3; }
+
+.way-4 {
+  grid-area: way4; }
+
+.way-5 {
+  grid-area: way5; }
+
+.way-6 {
+  grid-area: way6; }
+
+.money {
+  background: #38372b;
+  padding: 0.5rem;
+  border-bottom: #3e81b5 5px solid; }
+
+.links {
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .links img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .links img:hover {
+      opacity: 0.5;
+      border-color: #3e81b5;
+      transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #3e81b5;
+      color: #000; }
+      .boxes div:hover span {
+        color: #000; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: #3e81b5;
+    color: #000; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #b1ae98;
+  color: #333; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #0d0d0a;
+  color: #fff;
+  height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .links {
+    grid-template-columns: repeat(4, 1fr); } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .links {
+    grid-template-columns: repeat(3, 1fr); } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show {
+      transform: translate(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(100%, 0, 0);
+    font-size: 24px; }
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio' 'way1' 'way2' 'way3' 'way4' 'way5' 'way6';
+    grid-template-columns: 1fr; }
+  .links {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .links {
+    grid-template-columns: 1fr; } }
