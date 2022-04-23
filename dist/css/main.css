@@ -81,9 +81,9 @@
   box-sizing: border-box; }
 
 body {
+  height: 100%;
   background: #2a2920;
   color: #fff;
-  height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
@@ -92,7 +92,7 @@ body {
     background-attachment: fixed;
     background-size: cover; }
   body:after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -109,7 +109,8 @@ h1, h2, h3 {
   h1.sm-heading, h2.sm-heading, h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(48, 47, 36, 0.5); }
+    background: rgba(48, 47, 36, 0.5);
+    display: inline; }
 
 h3 {
   margin-top: 1rem;
