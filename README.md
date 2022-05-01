@@ -8,4 +8,4 @@ I did my coding in vscode, so these instructions are related to it.
 
 Or, to check the live site from github pages,
 check the link:
-https//IT-miez.github.io/front-end-coursework-site
+https://IT-miez.github.io/front-end-coursework-site
