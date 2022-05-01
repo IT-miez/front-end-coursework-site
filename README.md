@@ -1,3 +1,6 @@
+Name:
+Veikko Moilanen
+
 How to run this project:
 
 I did my coding in vscode, so these instructions are related to it.
